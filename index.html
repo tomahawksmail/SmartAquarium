@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="./css/clocklet.min.css">
+
+  <script src="./js/clocklet.js"></script>
+  <script src="./js/chart.js@2.8.0.js"></script>
+  <script src="./js/chartjs-plugin-datasource@0.1.0.js"></script>
+
+  <meta charset="utf-8">
+  <title>Smart Aquarium {Version}</title>
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+
+<div class="tabs">
+  <input type="radio" name="tab-btn" id="tab-btn-1" value="" checked>
+  <label for="tab-btn-1">MAIN</label>
+  <input type="radio" name="tab-btn" id="tab-btn-2" value="">
+  <label for="tab-btn-2">SCHEDULER</label>
+  <input type="radio" name="tab-btn" id="tab-btn-3" value="">
+  <label for="tab-btn-3">OPTIONS</label>
+  <input type="radio" name="tab-btn" id="tab-btn-4" value="">
+  <label for="tab-btn-4">SYSTEM</label>
+
+  <div id="content-1">
+    <div class="current">Current Temperature is: {cur_temp}</div>
+    <div class="grid">
+      <figure class="chart-wrap">
+        <canvas id="Chart_TEMP"></canvas>
+      </figure>
+    </div>
+    <div class="current">Current PH is: {cur_PH}</div>
+    <div class="grid">
+      <figure class="chart-wrap">
+        <canvas id="Chart_PH"></canvas>
+      </figure>
+    </div>
+    <div class="current">Current TDS is: {cur_TDS}</div>
+    <div class="grid">
+      <figure class="chart-wrap">
+        <canvas id="Chart_TDS"></canvas>
+      </figure>
+    </div>
+  </div>
+  <div id="content-2">
+    <form action="code.py" method="post">
+
+      <div class="current">Light</div>
+      <input data-clocklet="format: h:mm a" value="1:23 pm"><input data-clocklet="format: h:mm a" value="1:23 pm">
+
+      <p><input type="submit" value="Save"></p>
+    </form>
+  </div>
+  <div id="content-3">
+
+  </div>
+  <div id="content-4">
+    Содержимое 3...
+  </div>
+</div>
+
+<script src="./js/charts.js"></script>
+
+
+</body>
+</html>
